@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const axios = require('axios');
 
-const token = 'PONER TOKEN';
+const token = 'cacdf29dc2be47d484a105606152306';
 
 router.get('/', (req, res) => res.send('hola mundo funciona'));
 
@@ -29,7 +29,7 @@ router.get('/minAndMax', (req, res) => {
   const minAndMaxFunctionYesterday = (array, date) => {
     for (let i = date.getHours(); i < 24; i += 1) {
       const temp = array[i].temp_c;
-      console.log('temp ayer: ', temp, 'hora ', i);
+
       if (!max && !min) max = temp, min = temp;
       if (temp > max) max = temp;
       if (temp < min) min = temp;
@@ -40,8 +40,8 @@ router.get('/minAndMax', (req, res) => {
   const minAndMaxFunctionToday = (array, date) => {
     for (let i = date.getHours(); i >= 0; i -= 1) {
       const temp = array[i].temp_c;
+
       if (!max && !min) max = temp, min = temp;
-      console.log('temp hoy: ', temp, 'hora ', i);
       if (temp > max) max = temp;
       if (temp < min) min = temp;
     }
