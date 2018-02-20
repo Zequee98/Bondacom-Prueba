@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const axios = require('axios');
 
-const token = 'cacdf29dc2be47d484a105606152306';
+const token = 'PONER TOKEN';
 
 router.get('/', (req, res) => res.send('hola mundo funciona'));
 
